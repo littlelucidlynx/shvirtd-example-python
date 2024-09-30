@@ -1,30 +1,65 @@
-# shvirtd-example-python
+# Домашнее задание к занятию 5. «Практическое применение Docker»
 
-Example Flask-application for docker compose training.
-## Installation
-First, you need to clone this repository:
+## Задача 0
 
-```bash
-git clone https://github.com/netology-code/shvirtd-example-python.git
+![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image000.png)
+
+## Задача 1
+
+Dockerfile.python https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/Dockerfile.python
+
+Fork https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/README.md
+
+```
+docker network create --subnet=172.20.0.0/16 test-subnet
+
+docker run -d --network='test-subnet' --ip 172.20.0.10 --hostname='db' -e 'MYSQL_ROOT_PASSWORD=very_strong' -e 'MYSQL_DATABASE=example' -e 'MYSQL_USER=app' -e 'MYSQL_PASSWORD=very_strong' --name db mysql:8
+
+docker build -f Dockerfile.python -t web:1.0.0 .
+
+docker run -d --network='test-subnet' --ip 172.20.0.5 --hostname='web' -e 'DB_HOST=db' -e 'DB_USER=app' -e 'DB_PASSWORD=very_strong' -e 'DB_NAME=example' -p 8090:5000 --name web web:1.0.0
+
+curl -L localhost:8090
 ```
 
-Now, we will need to create a virtual environment and install all the dependencies:
+![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image001.png)
 
-```bash
-python3 -m venv venv  # on Windows, use "python -m venv venv" instead
-. venv/bin/activate   # on Windows, use "venv\Scripts\activate" instead
-pip install -r requirements.txt
-python main.py
+## Задача 2
+
+![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image002.png)
+
+![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image003.png)
+
+## Задача 3
+
+Контейнер с БД долго запускается из-за инициализации. Нужно выставить зависимость запуска веб (depends_on) и проверку состояния готовности БД (healthcheck)
+
+![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image004.png)
+
+![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image005.png)
+
+## Задача 4
+
+Bash https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/deploy-cloud.sh
+
 ```
-You need to run Mysql database and provide following ENV-variables for connection:  
-- DB_HOST (default: '127.0.0.1')
-- DB_USER (default: 'app')
-- DB_PASSWORD (default: 'very_strong')
-- DB_NAME (default: 'example')
+#!/bin/bash
+git clone https://github.com/littlelucidlynx/shvirtd-example-python.git /opt/shvirtd-example-python
+cd /opt/shvirtd-example-python
+docker compose up -d
+```
 
-The applications will always running on http://localhost:5000.  
-To exit venv just type ```deactivate```
+Fork https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/README.md
+![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image006.png)
 
-## License
+## Задача 6
 
-This project is licensed under the MIT License (see the `LICENSE` file for details).
+![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image007.png)
+
+![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image008.png)
+
+![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image009.png)
+
+### Задача 6.1
+
+![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image010.png)
