@@ -10,6 +10,8 @@ Dockerfile.python https://github.com/littlelucidlynx/shvirtd-example-python/blob
 
 Fork https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/README.md
 
+Создание тестового стенда, запуск контейнеров, проверка результата. Много писанины, надо переходить к Compose
+
 ```
 docker network create --subnet=172.20.0.0/16 test-subnet
 
