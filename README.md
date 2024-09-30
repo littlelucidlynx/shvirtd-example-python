@@ -6,9 +6,9 @@
 
 ## Задача 1
 
-Fork https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/README.md
+**Fork** https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/README.md
 
-Dockerfile.python https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/Dockerfile.python
+**Dockerfile.python** https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/Dockerfile.python
 
 Создание тестового стенда, запуск контейнеров, проверка результата. Много писанины, надо переходить к Compose
 
@@ -40,7 +40,7 @@ curl -L localhost:8090
 
 Контейнер с БД долго запускается из-за инициализации. Нужно выставить зависимость запуска веб от БД (depends_on) и проверку состояния готовности БД (healthcheck)
 
-compose.yaml https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/compose.yaml
+**compose.yaml** https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/compose.yaml
 
 ![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image004.png)
 
@@ -48,7 +48,7 @@ compose.yaml https://github.com/littlelucidlynx/shvirtd-example-python/blob/main
 
 ## Задача 4
 
-Bash https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/deploy-cloud.sh
+**Bash** https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/deploy-cloud.sh
 
 ```
 #!/bin/bash
@@ -57,7 +57,7 @@ cd /opt/shvirtd-example-python
 docker compose up -d
 ```
 
-Fork https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/README.md
+**Fork** https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/README.md
 
 ```
 docker exec -it shvirtd-example-python-db-1 /bin/sh
