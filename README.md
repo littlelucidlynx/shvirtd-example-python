@@ -6,9 +6,9 @@
 
 ## Задача 1
 
-Dockerfile.python https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/Dockerfile.python
-
 Fork https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/README.md
+
+Dockerfile.python https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/Dockerfile.python
 
 Создание тестового стенда, запуск контейнеров, проверка результата. Много писанины, надо переходить к Compose
 
