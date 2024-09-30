@@ -28,7 +28,11 @@ curl -L localhost:8090
 
 ## Задача 2
 
+Создал реестр через yc cli, запушил образ
+
 ![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image002.png)
+
+Запустил проверку через yc cli
 
 ![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image003.png)
 
@@ -52,9 +56,12 @@ docker compose up -d
 ```
 
 Fork https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/README.md
+
 ![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image006.png)
 
 ## Задача 6
+
+Копаюсь в образе через dive, docker save и tar
 
 ![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image007.png)
 
@@ -63,5 +70,7 @@ Fork https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/README.
 ![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image009.png)
 
 ### Задача 6.1
+
+Копаюсь в образе через docker cp
 
 ![Image alt](https://github.com/littlelucidlynx/shvirtd-example-python/raw/main/Screen/Image010.png)
