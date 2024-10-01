@@ -57,7 +57,7 @@ cd /opt/shvirtd-example-python
 docker compose up -d
 ```
 
-**Fork** https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/README.md
+**Fork** https://github.com/littlelucidlynx/shvirtd-example-python.git
 
 ```
 docker exec -it shvirtd-example-python-db-1 /bin/sh
