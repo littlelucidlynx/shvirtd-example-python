@@ -6,7 +6,7 @@
 
 ## Задача 1
 
-**Fork** https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/README.md
+**Fork** (https://github.com/littlelucidlynx/shvirtd-example-python.git)
 
 **Dockerfile.python** https://github.com/littlelucidlynx/shvirtd-example-python/blob/main/Dockerfile.python
 
